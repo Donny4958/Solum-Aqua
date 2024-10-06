@@ -1,0 +1,72 @@
+
+.navbar {
+    background-color: #E8F5E9; /* Color de fondo  */
+    padding: 10px; /* Espaciado  */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  .navbar-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 1400px; 
+    margin: 0 auto; /* Centra la navbar */
+  }
+
+  .logo {
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #4CAF50; /* Color verde para el logo */
+  }
+  
+  .nav-links {
+    list-style: none; 
+    display: flex; /* Flexbox para los enlaces */
+  }
+  
+  .nav-links li {
+    margin: 0 15px; /* Espaciado entre los enlaces */
+  }
+  
+  .nav-links a {
+    text-decoration: none; 
+    color: #333; /* Color del texto */
+    font-weight: 500; /* Peso de la fuente */
+    transition: color 0.3s; /* Transición suave al cambiar el color */
+  }
+  
+  .nav-links a:hover {
+    color: #4CAF50; /* Cambia el color al pasar el mouse */
+  }
+  
+  .start-button {
+    background-color: rgba(126, 197, 129, 0.861); /* Color del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave */
+   
+  }
+  
+  .start-button:hover {
+    background-color: rgba(12, 106, 17, 0.989); /* Color al pasar el mouse */
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+   
+  }
+  .logo img {
+    width: 120px;
+    height: auto;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el logo */
+}
+
+.logo {
+    text-decoration: none; /* Elimina el subrayado en el enlace */
+    display: inline-block;
+}
+
+.logo img:hover {
+  transform: scale(1.2); /* Aumenta el tamaño del logo ligeramente */
+  transition: transform 0.5s ease-in-out; /* Transición suave */
+}

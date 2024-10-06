@@ -1,0 +1,21 @@
+/* Estilos generales para el footer */
+.footer {
+  background-color: #333; /* Fondo oscuro */
+  height: auto;
+  color: white; /* Texto blanco */
+  padding: 20px;
+  text-align: center;
+}
+
+.footer a {
+  color: #00aaff; /* Color del enlace */
+  text-decoration: none; /* Eliminar subrayado */
+  font-weight: bold; /* Negrita */
+  margin-left: 10px;
+}
+
+/* Estilos para el efecto hover en el enlace */
+.footer a:hover {
+  color: #ffaa00; /* Cambiar el color cuando se pasa el ratón */
+  text-decoration: underline; /* Añadir subrayado al pasar el ratón */
+}

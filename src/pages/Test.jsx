@@ -8,6 +8,8 @@ const Weather = () => {
     const [location, setLocation] = useState({ latitude: null, longitude: null });
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [recommendations, setRecommendations] = useState([]);
+    
     const formatDate = (date) => {
         const pad = (number) => (number < 10 ? `0${number}` : number);
 
@@ -69,7 +71,7 @@ const Weather = () => {
             const formattedEndDate = formatDate(endDate);
 
             // Construir la URL dinámicamente
-            const url = `https://api.meteomatics.com/${formattedStartDate}--${formattedEndDate}:P1D/t_2m:C,relative_humidity_2m:p/${lat},${lon}/json`;
+            const url = `https://api.meteomatics.com/${formattedStartDate}--${formattedEndDate}:P1D/t_2m:C,relative_humidity_2m:p/${lat},${lon}/csv`;
 
             // Haciendo la solicitud con autenticación básica
             const response = await axios.get(url, {
@@ -128,7 +130,37 @@ const Weather = () => {
         }
     }, [location]);
 
-    // 7. Configuración de las opciones de Highcharts
+    // Nueva función para generar recomendaciones
+    const generateRecommendations = () => {
+        if (!chartData) return;
+
+        const { temperature, humidity } = chartData;
+        const latestTemp = temperature[temperature.length - 1]; // Última temperatura
+        const latestHum = humidity[humidity.length - 1]; // Última humedad
+
+        const newRecommendations = [];
+
+        // Ejemplo de recomendaciones
+        if (latestTemp > 30) {
+            newRecommendations.push('Asegúrate de regar los cultivos para evitar estrés hídrico.');
+        }
+        if (latestHum < 40) {
+            newRecommendations.push('Considera aumentar la humedad en invernaderos para mejorar el crecimiento.');
+        }
+        if (latestTemp < 10) {
+            newRecommendations.push('Protege las plantas sensibles a heladas.');
+        }
+        // Agrega más condiciones y recomendaciones según sea necesario
+
+        setRecommendations(newRecommendations);
+    };
+
+    // useEffect para generar recomendaciones cuando cambian los datos del clima
+    useEffect(() => {
+        generateRecommendations();
+    }, [chartData]);
+
+    // Configuración de Highcharts...
     const options = {
         title: {
             text: 'Datos Meteorológicos'
@@ -156,7 +188,6 @@ const Weather = () => {
     return (
         <div>
             <h1>Gráfico Meteorológico</h1>
-            
             {chartData ? (
                 <HighchartsReact
                     highcharts={Highcharts}
@@ -165,9 +196,21 @@ const Weather = () => {
             ) : (
                 <p>Cargando datos...</p>
             )}
+            
+            <div>
+                <h2>Recomendaciones</h2>
+                {recommendations.length > 0 ? (
+                    <ul>
+                        {recommendations.map((rec, index) => (
+                            <li key={index}>{rec}</li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p>No hay recomendaciones disponibles.</p>
+                )}
+            </div>
         </div>
     );
 };
 
 export default Weather;
-

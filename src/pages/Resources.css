@@ -1,14 +1,15 @@
 /* Contenedor principal de la aplicación */
 #app-container {
-    background-color: rgb(255, 255, 255); /* Fondo oscuro para un contraste elegante */
+    background-color: rgb(255, 255, 255); 
     color: rgb(0, 0, 0); 
-    padding: 40px 20px; /* Relleno generoso */
+    padding: 40px 20px;
     display: flex;
-    flex-direction: column;
+    height: 500px;
+    width: x;
+    flex-direction: column; /* Asegura que los elementos se coloquen en columna */
     align-items: center;
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 20px rgba(7, 201, 75, 0.2); /* Sombra sutil */
-    width: auto; /* Ancho adaptable */
+    border-radius: 0px;
+    box-shadow: 0 4px 20px rgba(7, 201, 75, 0.2);
 }
 
 /* Título principal */
@@ -28,7 +29,7 @@
 
 /* Estilo para cada elemento de la lista */
 .items {
-    margin: 15px 0; /* Mayor espacio entre elementos */
+    margin: 18px 0; /* Mayor espacio entre elementos */
     text-align: left;
     background-color: #05b62b; /* Fondo más claro para los elementos de la lista */
     padding: 15px; /* Relleno interior */

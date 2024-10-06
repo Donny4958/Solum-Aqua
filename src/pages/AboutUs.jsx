@@ -4,33 +4,37 @@ import './aboutus.css'; // Archivo CSS para los estilos en minúsculas
 const AboutUs = () => {
     return (
         <div className="about-container">
-            <h1 className="about-title">About Us</h1>
+            <h1 className="about-title">About "Los Crackers"</h1>
             <p className="about-description">
-                We are passionate about delivering sustainable agricultural solutions to help farmers increase productivity while conserving resources. Our mission is to empower communities through innovation and cutting-edge technologies.
-            </p>
+             Students passionate about programming and problem-solving.
+                            </p>
             
             <h2 className="about-subtitle">Our Mission</h2>
             <p className="about-text">
-                Our mission is to bridge the gap between modern technology and traditional farming methods, creating a harmonious balance that benefits both the environment and the economy.
+                Bridge the gap between modern technology and traditional farming methods, creating a harmonious balance that benefits both the environment and the economy.
             </p>
 
             <h2 className="about-subtitle">Meet the Team</h2>
             <div className="team-grid">
                 <div className="team-member">
-                    <h3>John Doe</h3>
-                    <p>CEO</p>
+                    <h3>Luis Mendivil</h3>
+                    <p>St.Computer Science Engineer</p>
                 </div>
                 <div className="team-member">
-                    <h3>Jane Smith</h3>
-                    <p>Agronomist</p>
+                    <h3>Paul Cruz</h3>
+                    <p>St.Computer Science Engineer</p>
                 </div>
                 <div className="team-member">
-                    <h3>Emily Johnson</h3>
-                    <p>Soil Scientist</p>
+                    <h3>Gael Pinto</h3>
+                    <p>St.Mechatronic Engineer</p>
                 </div>
                 <div className="team-member">
-                    <h3>Michael Brown</h3>
-                    <p>Data Analyst</p>
+                    <h3>Pablo Aboytes</h3>
+                    <p>St.Computer Science Engineer</p>
+                </div>
+                <div className="team-member">
+                    <h3>Jose Porchas</h3>
+                    <p>St.Computer Science Engineer</p>
                 </div>
             </div>
         </div>

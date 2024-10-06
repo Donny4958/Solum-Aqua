@@ -10,7 +10,7 @@ function App() {
     
     return (
         <div id="app-container">
-            <h1 id="titulo">Recommended Pages:</h1>
+            <h1 id="titulo">Resources:</h1>
             <ul id="lista">
                 {paginas.map((pagina, index) => (
                     <li key={index} className="items">
@@ -20,6 +20,7 @@ function App() {
                     </li>
                 ))}
             </ul>
+            <br /><br /><br /><br /><br /><br />
         </div>
     );
 }

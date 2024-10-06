@@ -21,7 +21,7 @@
 .dropbtn {
   
   background-color: #03ba90; /* Color de fondo */
-  color: rgb(255, 255, 255); /* Color del texto */
+  color: white; /* Color del texto */
   font-size: 1em; /* Tamaño de la fuente */
   padding: 12px; /* Espaciado */
   font-size: 30px; /* Tamaño de la fuente */
@@ -57,11 +57,11 @@
 }
 
 .plant-info {
-  margin-top: 20px; /* Espaciado superior */
-  padding: 10px; /* Espaciado interno */
-  color: rgb(253, 253, 253);
-  font-size: larger;
+  text-align: center;
+  color: white;
   background-color: rgb(38, 96, 57);
+  max-width: max-content;
+  max-height: max-content;
   margin-left: 15%;
   margin-right: 15%;
   border-radius: 3%;
